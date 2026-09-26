@@ -2,7 +2,8 @@
 	"root": true,
 	"ignorePatterns": [
 		"node_modules/**/*",
-		"scripts_files/**/*"
+		"scripts_files/**/*",
+		"Dota2SDK/**/*"
 	],
 	"env": {
 		"es6": true
@@ -17,7 +18,6 @@
 	},
 	"plugins": [
 		"eslint-plugin-import",
-		"eslint-plugin-jsdoc",
 		"eslint-plugin-unicorn",
 		"eslint-plugin-import",
 		"eslint-plugin-simple-import-sort",
@@ -85,30 +85,6 @@
 				}
 			}
 		],
-		"@typescript-eslint/naming-convention": [
-			"error",
-			{
-				"selector": "default",
-				"format": [
-					"camelCase",
-					"UPPER_CASE",
-					"PascalCase"
-				],
-				"leadingUnderscore": "allow",
-				"trailingUnderscore": "allow"
-			},
-			{
-				"selector": ["typeLike", "objectLiteralProperty", "objectLiteralMethod"],
-				"format": [
-					"camelCase",
-					"UPPER_CASE",
-					"PascalCase",
-					"snake_case" // Dota items and abilities names and WASM use snake case
-				],
-				"leadingUnderscore": "forbid",
-				"trailingUnderscore": "forbid"
-			}
-		],
 		"@typescript-eslint/no-empty-function": "error",
 		"@typescript-eslint/no-empty-interface": "error",
 		"@typescript-eslint/no-explicit-any": "off",
@@ -150,17 +126,23 @@
 				"lib": "always"
 			}
 		],
-		"curly": ["warn", "all"],
+		"curly": [
+			"warn",
+			"all"
+		],
 		"object-curly-spacing": [
-            "warn", 
-            "always",
-            { 
-                "objectsInObjects": false 
-            }
-        ],
+			"warn",
+			"always",
+			{
+				"objectsInObjects": false
+			}
+		],
 		"@typescript-eslint/typedef": "off",
 		"@typescript-eslint/unified-signatures": "off",
-		"arrow-parens": ["warn", "as-needed"],
+		"arrow-parens": [
+			"warn",
+			"as-needed"
+		],
 		"comma-spacing": "error",
 		"complexity": "off",
 		"no-multi-str": "error",
@@ -195,9 +177,6 @@
 		"import/no-extraneous-dependencies": "off",
 		"import/no-internal-modules": "off",
 		"indent": "off",
-		"jsdoc/check-alignment": "error",
-		"jsdoc/check-indentation": "error",
-		"jsdoc/newline-after-description": "error",
 		"max-classes-per-file": "off",
 		"max-len": "off",
 		"new-parens": "error",
@@ -253,24 +232,30 @@
 		"unicorn/prefer-ternary": "error",
 		"use-isnan": "error",
 		"valid-typeof": "off",
-		"prettier/prettier": ["error", {
-			"useTabs": true,
-			"semi": false,
-			"endOfLine": "auto",
-			"arrowParens": "avoid",
-			"singleQuote": false,
-			"printWidth": 120,
-			"tabWidth": 4,
-			"trailingComma": "none",
-			"breakBeforeElse": true,
-			"proseWrap": "always"
-		}],
-		"@typescript-eslint/consistent-type-imports": ["error", {
-			// TODO: uncomment once we use ESBuild
-			// "prefer": "type-imports",
-			// "fixStyle": "inline-type-imports"
-			"prefer": "no-type-imports"
-		}],
+		"prettier/prettier": [
+			"error",
+			{
+				"useTabs": true,
+				"semi": false,
+				"endOfLine": "auto",
+				"arrowParens": "avoid",
+				"singleQuote": false,
+				"printWidth": 120,
+				"tabWidth": 2,
+				"trailingComma": "none",
+				"breakBeforeElse": true,
+				"proseWrap": "always"
+			}
+		],
+		"@typescript-eslint/consistent-type-imports": [
+			"error",
+			{
+				// TODO: uncomment once we use ESBuild
+				// "prefer": "type-imports",
+				// "fixStyle": "inline-type-imports"
+				"prefer": "no-type-imports"
+			}
+		],
 		"import/first": "error",
 		"import/no-default-export": "error",
 		"import/no-duplicates": "error",
@@ -282,10 +267,19 @@
 		"unused-imports/no-unused-imports": "error",
 		"unused-imports/no-unused-vars": [
 			"warn",
-			{ "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+			{
+				"vars": "all",
+				"varsIgnorePattern": "^_",
+				"args": "after-used",
+				"argsIgnorePattern": "^_"
+			}
 		],
-		"func-style": ["warn", "declaration", {
-            "allowArrowFunctions": true
-        }]
+		"func-style": [
+			"warn",
+			"declaration",
+			{
+				"allowArrowFunctions": true
+			}
+		]
 	}
 }
