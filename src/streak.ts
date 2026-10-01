@@ -5,7 +5,7 @@ const RAMPAGE = 5
 /** What the game calls a streak of each length, from one kill to a rampage. */
 const STREAK_NAMES = ["KILL", "DOUBLE KILL", "TRIPLE KILL", "ULTRA KILL", "RAMPAGE!"]
 
-/** The local hero's multi-kill: how many kills it holds and when the last of them landed. */
+/** A hero's multi-kill: how many kills it holds and when the last of them landed. */
 export class KillStreak {
 	private kills = 0
 	private lastKill = 0

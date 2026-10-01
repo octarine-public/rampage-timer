@@ -3,6 +3,13 @@
 	"State": "State",
 	"Only before Rampage": "Only before Rampage",
 	"Show timer only at 4 kills (Ultra Kill)": "Show timer only at 4 kills (Ultra Kill)",
+	"Show icon": "Show icon",
+	"Show the hero's icon next to the streak": "Show the hero's icon next to the streak",
 	"Size": "Size",
-	"Time left to extend a multi-kill": "Time left to extend a multi-kill"
+	"Time left to extend a multi-kill": "Time left to extend a multi-kill",
+	"Show for": "Show for",
+	"Whose multi-kills to follow": "Whose multi-kills to follow",
+	"Me": "Me",
+	"Allies": "Allies",
+	"Enemies": "Enemies"
 }

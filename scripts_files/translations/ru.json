@@ -3,6 +3,13 @@
 	"State": "Состояние",
 	"Only before Rampage": "Только перед рампагой",
 	"Show timer only at 4 kills (Ultra Kill)": "Показывать таймер только при 4 убийствах (Ultra Kill)",
+	"Show icon": "Показывать иконку",
+	"Show the hero's icon next to the streak": "Показывать иконку героя рядом с серией",
 	"Size": "Размер",
-	"Time left to extend a multi-kill": "Сколько осталось, чтобы продлить серию убийств"
+	"Time left to extend a multi-kill": "Сколько осталось, чтобы продлить серию убийств",
+	"Show for": "Герои",
+	"Whose multi-kills to follow": "Чьи серии убийств отслеживать",
+	"Me": "Мой герой",
+	"Allies": "Союзники",
+	"Enemies": "Противники"
 }
