@@ -57,13 +57,18 @@ new (class CRampageTimer {
 	}
 
 	constructor() {
-		EventsSDK.on("Draw", this.Draw.bind(this))
+		EventsSDK.on("Draw2D", this.Draw.bind(this))
 		EventsSDK.on("GameEvent", this.GameEvent.bind(this))
 		EventsSDK.on("GameEnded", this.GameEnded.bind(this))
 		InputEventSDK.on("MouseKeyDown", this.MouseKeyDown.bind(this))
 		InputEventSDK.on("MouseKeyUp", this.MouseKeyUp.bind(this))
 	}
 
+	/**
+	 * Runs in the retained HUD pass: the card holds between passes, and a pass that leaves it out -
+	 * the script off, nothing running - takes it down. The countdown reads in tenths, which the
+	 * pass's own rate keeps up with.
+	 */
 	protected Draw(): void {
 		if (!this.menu.State.value) {
 			this.gui.Reset()
